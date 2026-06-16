@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Câu hỏi bí mật ❤️</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align:center;
+    margin-top:100px;
+    background:#ffe6f0;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    margin:10px;
+    cursor:pointer;
+}
+
+#yes{
+    position:absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Bạn có muốn giảm cân không? 🤔</h1>
+
+<button id="yes">Có</button>
+<button onclick="answer()">Không</button>
+
+<script>
+const yes = document.getElementById("yes");
+
+function moveButton(){
+    let x = Math.random()*(window.innerWidth-120);
+    let y = Math.random()*(window.innerHeight-80);
+
+    yes.style.left = x+"px";
+    yes.style.top = y+"px";
+}
+
+yes.addEventListener("mouseover", moveButton);
+yes.addEventListener("touchstart", moveButton);
+
+function answer(){
+    document.body.innerHTML =
+    "<h1>❤️ Cảm ơn bạn đã trả lời ❤️</h1><h2>Mình thấy bạn hiện tại đã rất ổn rồi 😊</h2>";
+}
+</script>
+
+</body>
+</html>
