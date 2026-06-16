@@ -4,74 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Câu hỏi bí mật ❤️</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffe6f0;
-            margin-top: 100px;
-            overflow: hidden;
-        }
-
-        h1 {
-            color: #ff4081;
-        }
-
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            margin: 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-        }
-
-        #yes {
-            position: absolute;
-        }
-
-        #no {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        #yes {
-            background-color: #f44336;
-            color: white;
-        }
-    </style>
 </head>
-
 <body>
-
     <h1>Bạn có muốn giảm cân không? 🤔</h1>
-
-    <button id="yes">Có</button>
-    <button id="no" onclick="thankYou()">Không</button>
-
-    <script>
-        const yesBtn = document.getElementById("yes");
-
-        function moveButton() {
-            const x = Math.random() * (window.innerWidth - 120);
-            const y = Math.random() * (window.innerHeight - 60);
-
-            yesBtn.style.left = x + "px";
-            yesBtn.style.top = y + "px";
-        }
-
-        yesBtn.addEventListener("mouseover", moveButton);
-        yesBtn.addEventListener("click", moveButton);
-        yesBtn.addEventListener("touchstart", moveButton);
-
-        function thankYou() {
-            document.body.innerHTML = `
-                <h1>❤️ Cảm ơn bạn đã trả lời ❤️</h1>
-                <h2>Mình thấy bạn hiện tại đã rất tuyệt rồi! 😊</h2>
-            `;
-        }
-    </script>
-
+    <button>Có</button>
+    <button>Không</button>
 </body>
 </html>
